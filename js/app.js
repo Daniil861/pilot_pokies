@@ -3411,10 +3411,11 @@
             let chips_left = item_chips.getBoundingClientRect().left;
             let chips_top = item_chips.getBoundingClientRect().top;
             move();
+            let window_width = document.documentElement.clientWidth;
             setInterval((() => {
                 let a = get_coord_left_air();
                 let b = get_coord_top_air();
-                if (a > 460 || b < 30) {
+                if (a > window_width || b < 30) {
                     stopMove();
                     document.querySelector(".wrapper__play").classList.add("_active");
                 }
