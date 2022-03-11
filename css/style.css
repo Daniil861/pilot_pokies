@@ -362,9 +362,14 @@ body._loaded {
 }
 
 .main {
-  height: calc(100vh - 100px);
+  height: 100vh;
   display: flex;
   align-items: center;
+}
+@media (min-height: 43.75em) {
+  .main {
+    height: calc(100vh - 100px);
+  }
 }
 .main__buttons {
   display: flex;
